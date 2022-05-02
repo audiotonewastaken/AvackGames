@@ -17,13 +17,5 @@ document.addEventListener('keydown', (event) => {
    location.replace("https://classroom.google.com");
     }
   }, false);
-  </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-226541035-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-226541035-1');
-
+  
+function a
