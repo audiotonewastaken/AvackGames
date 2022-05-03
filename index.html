@@ -73,15 +73,18 @@
       </button>
     </div>
   </div>
-    <div class="row">
-    <div class="column">
-      <a href="game1.html"
-        ><img src="thereisnogame.png" style=""width:="100%" alt="Play There Is No Game on Avack! "
-      /></a>
-       <a href="game1.html"
-        ><img src="osu.png" style=""width:="100%" alt="Play There Is No Game on Avack! "
-      /></a>
-    </div>
+   <div class="row">
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
       
   <div class="column">
     <div class="row">
@@ -158,6 +161,19 @@
  
  </div>
 <style>
+  * {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
   :root {
   font-size: 16px;
   font-family: 'Open Sans';
