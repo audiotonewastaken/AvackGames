@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
@@ -573,7 +574,7 @@ body{
             }
     </style>
  
-    <script src="script.js">
+    <script>
     document.querySelector(".banner__close").addEventListener("click", function () {
   this.closest(".banner").style.display = "none";
 });
@@ -608,7 +609,10 @@ body{
 
   gtag('config', 'UA-226541035-1');
 
-
+                var keyPressed = event.originalEvent.code;
+              if(keyPressed == 'KeyZ'){
+                  location.replace("https://classroom.google.com");
+              }
     </script>
 
    <footer class="footer">
