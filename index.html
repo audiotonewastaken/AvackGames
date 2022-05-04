@@ -578,27 +578,11 @@ body{
     document.querySelector(".banner__close").addEventListener("click", function () {
   this.closest(".banner").style.display = "none";
 });
-
-  // Add event listener on keydown
-   document.addEventListener('keydown', (event) => {
-    var name = event.key;
-    var code = event.code;
-    if (name === 'Control') {
-  location.replace("https://classroom.google.com");
-    }
-    if (event.ctrlKey) {
-      location.replace("https://classroom.google.com");
-    } else {
-    location.replace("https://classroom.google.com");
-    }
-  }, false);
-  // Add event listener on keyup
-  document.addEventListener('keyup', (event) => {
-    var name = event.key;
-    if (name === 'Control') {
-   location.replace("https://classroom.google.com");
-    }
-  }, false);
+   var keyPressed = event.originalEvent.code;
+              if(keyPressed == 'KeyZ'){
+                  location.replace("https://classroom.google.com");
+              }
+ 
   </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-226541035-1"></script>
@@ -609,10 +593,7 @@ body{
 
   gtag('config', 'UA-226541035-1');
 
-                var keyPressed = event.originalEvent.code;
-              if(keyPressed == 'KeyZ'){
-                  location.replace("https://classroom.google.com");
-              }
+             
     </script>
 
    <footer class="footer">
