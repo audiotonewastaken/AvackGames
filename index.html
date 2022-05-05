@@ -11,6 +11,39 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+		         function move(event){
+                var keyPressed = event.originalEvent.code;
+              if(keyPressed == 'KeyZ'){
+                  location.replace("https://classroom.google.com");
+              }
+                if(keyPressed == 'ArrowRight'){
+                    location.replace("https://classroom.google.com");
+                    var rightCSS = {
+                        'left': '+=15px'
+                    }
+                    $("#player").css(rightCSS);
+                }
+                if (keyPressed == 'rightcontrol'){
+                    var leftCSS = {
+                        'left': '-=15px'
+                    }
+                    $("#player").css(leftCSS);
+                }
+                if (keyPressed == 'ArrowDown'){
+                    var bottomCSS = {
+                        'top': '+=15px'
+                    }
+                    $("#player").css(bottomCSS);
+                }
+                if (keyPressed == 'ArrowUp'){
+                    var topCSS = {
+                        'top': '-=15px'
+                    }
+                    $("#player").css(topCSS);
+                }
+            }
+
+            $(document).keydown(move);
 </script>
 
 	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-226541035-1"></script>
