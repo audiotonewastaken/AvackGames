@@ -6,8 +6,98 @@
     <h1>Well Damn</h1>
     <p> Looks like the websites down</p>
     <p> This most likely means there is active development or some problem with the website</p>
+    
     <p>Contact AudioCypher#4707 on Discord, navdeepsjhand@gmail.com if you think this is a mistake.</p>
     <p>Development takes time.</p>
-    <h1> This website is closed from Monday 5-1-22 until Tuesday 5-2-22</h1>
+<div class="container text-center">
+  <div>
+    <div id="head">
+      <h1>Feeling Bored? Generate a quote</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6" id="intro">
+     
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div>
+      <button onclick="changeQuotes()" class="button" >New Quotes</button>
+    </div>
+    <div class="row textArea">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6 well message">
+        <h3 id="quote"></h3>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</div>
+    <style>
+      body {
+  background: 
+  background-size: cover;
+}
+
+#head {
+
+  padding-top: 20px;
+}
+
+#intro {
+
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.button {
+
+  font-size: 30px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: silver;
+}
+
+.textArea {
+  padding-top: 30px;
+}
+
+#quote {
+
+  font-style: oblique;
+}
+
+.footer {
+  padding-bottom: 20px;
+}
+    </style>
+  <script>
+    var quote = document.getElementById('quote');
+var randomQuotes = ['When you do crazy things, expect crazy results', 
+                   "The only mystery in life is why the kamikaze pilots wore helmets.",
+                    'Only the wisest and stupidest of men never change.', 
+                    "When tempted to fight fire with fire, remember that the Fire Department usually uses water.", 
+                    
+                   "America is a country where half the money is spent buying food, and the other half is spent trying to lose weight.", 
+                   "A bank is a place that will lend you money, if you can prove that you don't need it.", 
+                    "The best way to lie is to tell the truth . . . carefully edited truth.", 
+                    
+                   ];
+
+function changeQuotes() {
+  var i = Math.floor((Math.random() * randomQuotes.length));
+           quote.innerText = randomQuotes[i];
+}
+
+changeQuotes();
+    </script>
   </body>
 </html>
