@@ -11,39 +11,7 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-		         function move(event){
-                var keyPressed = event.originalEvent.code;
-              if(keyPressed == 'KeyZ'){
-                  location.replace("https://classroom.google.com");
-              }
-                if(keyPressed == 'ArrowRight'){
-                    location.replace("https://classroom.google.com");
-                    var rightCSS = {
-                        'left': '+=15px'
-                    }
-                    $("#player").css(rightCSS);
-                }
-                if (keyPressed == 'rightcontrol'){
-                    var leftCSS = {
-                        'left': '-=15px'
-                    }
-                    $("#player").css(leftCSS);
-                }
-                if (keyPressed == 'ArrowDown'){
-                    var bottomCSS = {
-                        'top': '+=15px'
-                    }
-                    $("#player").css(bottomCSS);
-                }
-                if (keyPressed == 'ArrowUp'){
-                    var topCSS = {
-                        'top': '-=15px'
-                    }
-                    $("#player").css(topCSS);
-                }
-            }
-
-            $(document).keydown(move);
+	
 </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="collision.js"></script>
@@ -101,7 +69,7 @@ function myFunction() {
      <div class="banner">
     <div class="banner__content">
       <div class="banner__text">
-      THIS IS AN UNSTABLE BUILD OF AVACK EXPECT BUGS AND THINGS TO NOT WORK
+      Avack 1.8.5 Stable
     </a>
       </div>
       <button class="banner__close" type="button">
