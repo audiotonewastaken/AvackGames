@@ -138,12 +138,13 @@ function myFunction() {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script> 
+				      <button onclick="openFullscreen();">Open game in Fullscreen Mode</button>
 <iframe id="mygame" width="1000" height="1000" allow="fullscreen; autoplay; encrypted-media" src="https://games.construct.net/859/latest" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe>
    
     
  
  </div>
-	<button onclick="openFullscreen();">Open game in Fullscreen Mode</button>			      
+			      
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="collision.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet">
@@ -165,7 +166,18 @@ function myFunction() {
 
   gtag('config', 'UA-226541035-1');      
   </script>
-
+<script>
+var elem = document.getElementById("mygame");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 
    <footer class="footer">
       <div class="l-footer">
