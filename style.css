@@ -493,3 +493,26 @@ body {
             .header h2 {
               text-align: center;
             }
+   
+
+#button {
+
+  font-size: 30px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: silver;
+}
+
+
+
+.footer {
+  padding-bottom: 20px;
+}
