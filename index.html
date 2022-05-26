@@ -1,238 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <script>
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+    <title>Socket.IO chat</title>
+    <style>
+      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-	
-</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="collision.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet">
-	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-226541035-1"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-    rel="stylesheet"
-  
-    <meta name="description
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" src="style.css">
-					   
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-     crossorigin="anonymous"></script>
-  <!-- 
-  <meta http-equiv="Refresh" content="0.01;url=404.html">
-  -->
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="avackfavicon.png">
-    <meta
-      name="google-site-verification"
-      content="4r8rawbw-S0BMvqYNycrCTkT0APBsfcCsQJlvQ-NmjI"
-    />
-
-    <meta
-      name="description"
-      content="Free unblocked games! Avack brings you high quality HTML5 games for you to play. Play Avack Games today!"
-    />
-    <meta name="author" content="Samrath Singh Jhand "/>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-      crossorigin="anonymous"
-    ></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Avack Games</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-   
-   
-     <div class="banner">
-    <div class="banner__content">
-      <div class="banner__text">
-      Avack 1.8.5 Stable
-    </a>
-      </div>
-      <button class="banner__close" type="button">
-        <span class="material-icons">
-          close
-        </span>
-      </button>
-    </div>
-  </div>
- <div class="header">
-
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div>  
-</div>
-
-  <
-  
- 
-
-   <div id="myDIV">
-	<a href="game1.html">   <img src="thereisnogame.png" alt="Play the free HTML5 game There is no game! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-	<a href="game2.html">   <img src="proxywars.png" alt="Play the free HTML5 game Proxy Wars! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-	<a href="game3.html">   <img src="geometry.png" alt="Play the free HTML5 game Geometry Dash! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-	
-	<a href="game5.html">   <img src="halflife.png" alt="Play the free HTML5 game Half-life! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game7.html">   <img src="rooftopsnipers.png" alt="Play the free HTML5 game Rooftop Snipers! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game8.html">   <img src="panicgame.png" alt="Play the free HTML5 game Panic! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game9.html">   <img src="bear.png" alt="Play the free HTML5 game Pixel Bear Adventure! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game10.html">   <img src="mario.png" alt="Play the free HTML5 game Mario fan game! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game11.html">   <img src="osu.png" alt="Play the free HTML5 game Osu! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-        <a href="game12.html">   <img src="flappybird.png" alt="Play the free HTML5 game Flappy Bird! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-<a href="game14.html">   <img src="asteroid.png" alt="Play the free HTML5 game AsteroidX! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-<a href="game15.html">   <img src="afterlife.png" alt="Play the free HTML5 game Afterlife! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-<a href="game16.html">   <img src="tank.png" alt="Play the free HTML5 game Tank Trouble 2! on Avackgames.xyz! Avack games, bringing you quality, free, unblocked HTML5 games" style="width:25%"></a></div>
-</div>   
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-8287992783762700"
-     data-ad-slot="5633493061"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  
-  
-            
-    
- 
-    
- 
-
-  
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-     crossorigin="anonymous"></script>
-<!-- ad1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8287992783762700"
-     data-ad-slot="6853714581"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GMVE2145"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V2GMVE2145');
-</script>
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; }
+      #messages > li:nth-child(odd) { background: #efefef; }
+    </style>
   </head>
   <body>
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287992783762700"
-     crossorigin="anonymous"></script>
-<!-- ad1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8287992783762700"
-     data-ad-slot="6853714581"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script> 
- 
-   
-    
- 
- </div>
-				      
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="collision.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    <body>   
-           
-      <script src="script.js"></script>
-			     <script>
-    document.querySelector(".banner__close").addEventListener("click", function () {
-  this.closest(".banner").style.display = "none";
-});
-   var keyPressed = event.originalEvent.code;
-              if(keyPressed == 'KeyZ'){
-                  location.replace("https://classroom.google.com");
-              }
-   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  var socket = io();
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
 
-  gtag('config', 'UA-226541035-1');
+  var form = document.getElementById('form');
+  var input = document.getElementById('input');
 
-             
-  </script>
-								 <div class="comments">
-<!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16798&num=10&ts=1652492919880");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-</div>
-   <footer class="footer">
-      <div class="l-footer">
-        <h1>
-          <img src="Avack.png" alt=""/>
-        </h1>
-        <p id="footerp">Bringing quality games to you!</p>
-      </div>
-      <ul class="r-footer">
-        <li>
-          <h2>Social</h2>
-          <ul class="box">
-            <li><a href="#">Discord</a></li>
-          </ul>
-        </li>
-        <li class="features">
-          <h2>Information</h2>
-          <ul class="box h-box">
-            <li><a href="#">Home</a></li>
-          </ul>
-        </li>
-        <li>
-          <ul class="box">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contract</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="b-footer">
-        <p id="footer-text">Avack Games</p>
-      </div>
-    
-    </footer>
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
 
-   
-  
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
 
- </div>
+  var messages = document.getElementById('messages');
+  var form = document.getElementById('form');
+  var input = document.getElementById('input');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
+
+  socket.on('chat message', function(msg) {
+    var item = document.createElement('li');
+    item.textContent = msg;
+    messages.appendChild(item);
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+</script>
   </body>
 </html>

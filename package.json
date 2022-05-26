@@ -1,26 +1,9 @@
 {
-  "name": "avackgames",
-  "version": "1.0.0",
-  "description": "First build of Avack CHat",
-  "main": "n",
-  "scripts": {
-    "devStart": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/audiotonewastaken/AvackGames.git"
-  },
-  "author": "Samrath Singh Jhand",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/audiotonewastaken/AvackGames/issues"
-  },
-  "homepage": "https://github.com/audiotonewastaken/AvackGames#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.16"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "http-server": "^14.1.0"
-  }
+    "name": "socket-chat-example",
+    "version": "0.0.1",
+    "description": "my first socket.io app",
+    "dependencies": {
+        "express": "^4.18.1",
+        "socket.io": "^4.5.1"
+    }
 }
