@@ -1,4 +1,4 @@
-#WTFPL LICENSE
+# WTFPL LICENSE
 # AvackGames
 Please read the License before forking this project.
 This version is functional but severly outdated and inefficent.
